@@ -24,7 +24,7 @@ app.get("/", (req, res, next)=>{return res.status(200).json({
   message: "Route Connected"
 })})
 
-app.get("/test-connection", async (req, res){
+app.get("/test", async (req, res){
   res.send("OK");
 });
 
