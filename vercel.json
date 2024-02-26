@@ -1,8 +1,7 @@
 {
   "version": 2,
-  "builds": [{ "src": "./app.js", "use": "@vercel/node", "timeout": 30 }],
+  "builds": [{ "src": "app.js", "use": "@vercel/node" }],
   "routes": [
-    { "src": "/api/(.*)", "dest": "api/$1" },
     { "src": "/(.*)", "dest": "/" }
   ]
 }
