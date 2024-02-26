@@ -26,7 +26,7 @@ app.use("/", (req, res) => {
 });
 
 app.use("/api/v1/reservation", reservationRouter);
-app.get("/", (req, res, next)=>{return res.status(200).json({
+app.get("/api/reservation", (req, res, next)=>{return res.status(200).json({
   success: true,
   message: "Route Connected"
 })})
