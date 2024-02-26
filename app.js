@@ -23,7 +23,12 @@ app.get("/", (req, res, next)=>{return res.status(200).json({
   success: true,
   message: "Route Connected"
 })})
-
+app.use("*", (req, res) => {
+  res.status(404).json({
+    success: false,
+    message: "Route not found",
+  });
+});
 dbConnection();
 
 app.use(errorMiddleware);
